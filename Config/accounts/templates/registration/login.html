@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+{% block content %}
+{% load crispy_forms_tags %}
+
+<body class=" .bg bg-light">
+    <h2>Log In</h2>
+    <form action="" method="post">
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button class="btn btn-success ml-2" type="submit">Login</button>
+        </form>
+</body>
+{% endblock content %}
+
+</html>
